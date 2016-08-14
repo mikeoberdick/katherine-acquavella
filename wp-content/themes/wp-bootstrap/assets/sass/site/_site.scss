@@ -1,0 +1,90 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";
+
+/* Header */
+
+.navbar-header {
+	#logo {
+		max-width: 250px;
+		padding: 15px 0 10px;
+	}
+	h1 a {
+		font-size: 24px;
+	    color: #ffffff;
+	    padding: 15px 0;
+	    &:hover {
+	    	color: #efefef;
+	    	text-decoration: none;
+	    }
+	}
+}
+
+/* Sidebar */
+
+#company_info {
+	margin-bottom: 1.5em;
+	#address i {
+		vertical-align: top;
+		margin-top: 3px;
+	}
+	p {
+		display: inline-block;
+		padding-left: 10px;
+		margin-bottom: 5px;
+	}
+}
+
+/* Blog */
+
+.post {
+	margin: 20px 0 40px;
+	}
+
+/* Footer */
+
+#footerWidgetsWrapper {
+	padding: 50px 0;
+	background: $footer_bg;
+	h4 {
+		text-transform: uppercase;
+		color: $footer_header;
+	}
+}
+
+#footerCopyWrapper {
+	padding: 25px 0 10px;
+	background: $footer_copy_bg;
+	color: $footer_copy_text;
+	#social_icons {
+		ul {
+		list-style: none;
+		margin: 0;
+		li {
+			display: inline;
+			margin-right: 10px;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			a {
+				color: $social_icon;
+				font-size: 24px;
+				i {
+					vertical-align: top;
+				}
+				&:hover {
+					opacity: .8;
+					}
+				}
+			}
+		}
+	}
+}
