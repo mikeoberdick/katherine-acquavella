@@ -3,6 +3,8 @@
 function theme_styles() {
 	wp_enqueue_style( 'theme', get_template_directory_uri() . '/style.css');
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
+	wp_enqueue_style( 'montserrat-font', 'https://fonts.googleapis.com/css?family=Montserrat');
+	wp_enqueue_style( 'oswald-font', 'https://fonts.googleapis.com/css?family=Fjalla+One');
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
@@ -18,7 +20,7 @@ function theme_js() {
 add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 add_theme_support( 'menus' );
-add_theme_support( 'post_thumbnails' );
+add_theme_support( 'post-thumbnails' );
 
 function register_theme_menus() {
 	register_nav_menus(
@@ -62,51 +64,10 @@ function theme_widgets() {
         'id' => 'sidebar',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="widgettitle">',
-		'after_title'   => '</h4>'
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>'
     )
     	);
-
-    register_sidebar( array (
-        'name' => 'Footer Area #1',
-        'id' => 'footer-1',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="widgettitle">',
-		'after_title'   => '</h4>'
-    )
-    	);
-
-	register_sidebar( array (
-        'name' => 'Footer Area #2',
-        'id' => 'footer-2',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="widgettitle">',
-		'after_title'   => '</h4>'
-    )
-    	);
-
-	register_sidebar( array (
-        'name' => 'Footer Area #3',
-        'id' => 'footer-3',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="widgettitle">',
-		'after_title'   => '</h4>'
-    )
-    	);
-
-	register_sidebar( array (
-        'name' => 'Footer Area #4',
-        'id' => 'footer-4',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="widgettitle">',
-		'after_title'   => '</h4>'
-    )
-    	);
-
 }
 
 

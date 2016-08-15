@@ -10,11 +10,19 @@ html {
 
 body {
 	background: $color__background-body;
-	padding-top: 50px;
 }
 
-h1 {
-	margin: 0;
+a, a:hover, a:focus, a:visited {
+	text-decoration: none;
+	transition: all 1s;
+}
+
+a:hover {
+	opacity: .75;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Fjalla One', sans-serif;
 }
 
 blockquote, q {
@@ -41,12 +49,3 @@ img {
 }
 
 @import "tables";
-
-.admin-bar {
-	.navbar-fixed-top {
-		margin-top: 32px;
-		@media only screen and (max-width: 767px) {
-			margin-top: 46px;
-		}
-	}
-}

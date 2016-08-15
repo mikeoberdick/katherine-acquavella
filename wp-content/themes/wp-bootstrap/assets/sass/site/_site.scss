@@ -12,19 +12,28 @@
 
 /* Header */
 
-.navbar-header {
-	#logo {
-		max-width: 250px;
-		padding: 15px 0 10px;
-	}
-	h1 a {
-		font-size: 24px;
-	    color: #ffffff;
-	    padding: 15px 0;
-	    &:hover {
-	    	color: #efefef;
-	    	text-decoration: none;
-	    }
+#hp_header {
+	background: #000000 url('/wp-content/themes/wp-bootstrap/assets/images/header_bg.jpg') no-repeat center center;
+	background-size: cover;
+	height: 350px;
+	padding: 100px 5% 50px;
+	h1 {
+  		a {
+	  		font-family: 'Montserrat', sans-serif;
+			display: block;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 7.2rem;
+	  		text-shadow:
+	  		0px 4px 3px rgba(0,0,0,0.8),
+	  		0px 8px 13px rgba(0,0,0,0.1),
+	  		0px 18px 23px rgb(0, 0, 0);
+  			color: #ffffff;
+  			text-decoration: none;
+  			&:hover {
+  				opacity: 1;
+  			}
+  		}
 	}
 }
 
@@ -43,45 +52,101 @@
 	}
 }
 
+.widget_categories {
+	ul {
+		list-style: none;
+		padding-left: 0;
+	}
+}
+
 /* Blog */
 
 .post {
 	margin: 20px 0 40px;
 	}
 
-/* Footer */
+#byline{
+		font-style: italic;
+		a {
+			font-style: normal;
+			font-size: 12px;
+			background: #000000;
+		    color: #ffffff;
+		    text-decoration: none;
+		    padding: 5px;
+		    border-radius: 5px;
+		    margin-left: 10px;
+		}
+	}
 
-#footerWidgetsWrapper {
-	padding: 50px 0;
-	background: $footer_bg;
-	h4 {
-		text-transform: uppercase;
-		color: $footer_header;
+/* Contact Page */
+
+#contact {
+	img {
+		margin-bottom: 25px;
+	}
+	p {
+		font-size: 22px;
+		i {
+			margin-right: 10px;
+		}
+	}
+	#social_icons {
+		ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		text-align: center;
+		li {
+			display: inline;
+			margin-right: 25px;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			a {
+				font-size: 48px;
+				transition: all 1s;
+				i {
+					vertical-align: top;
+				}
+				&:hover {
+					opacity: .75;
+					}
+				}
+			}
+		}
 	}
 }
 
+/* Footer */
+
 #footerCopyWrapper {
-	padding: 25px 0 10px;
+	padding: 30px 0;
 	background: $footer_copy_bg;
-	color: $footer_copy_text;
+	#copyLeft {
+		color: $footer_copy_text;
+		font-size: 18px;
+		line-height: 48px;
+	}
 	#social_icons {
 		ul {
 		list-style: none;
 		margin: 0;
 		li {
 			display: inline;
-			margin-right: 10px;
+			margin-right: 25px;
 			&:last-of-type {
 				margin-right: 0;
 			}
 			a {
 				color: $social_icon;
-				font-size: 24px;
+				font-size: 48px;
+				transition: all 1s;
 				i {
 					vertical-align: top;
 				}
 				&:hover {
-					opacity: .8;
+					color: $dark_gray;
 					}
 				}
 			}

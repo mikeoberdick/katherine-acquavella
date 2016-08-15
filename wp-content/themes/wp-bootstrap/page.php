@@ -3,7 +3,7 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-9">
           
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         
@@ -12,6 +12,10 @@
           </div>
 
           <?php the_content(); ?>
+
+          <?php if ( is_page( 'contact' ) ) {
+            get_template_part( 'template-parts/content', 'contact_page' );
+          } ?>
 
         <?php endwhile; else: ?>
 
@@ -23,6 +27,9 @@
         <?php endif; ?>
 
         </div>
-       </div>
+
+          <?php get_sidebar(); ?>
+
+      </div>
         
 <?php get_footer(); ?>

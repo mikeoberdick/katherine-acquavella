@@ -20,7 +20,11 @@
 
   <body <?php body_class(); ?>>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div id = "hp_header">
+        <h1><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+    </div>
+
+    <nav>
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -29,13 +33,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <?php
-              if ( get_field('logo', 'option') ) { ?>
-                  <div id = "logo"><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><img src = "<?php the_field('logo', 'option'); ?>" alt = "<?php bloginfo( 'name' ); ?> logo" title = "<?php bloginfo( 'name' ); ?>" /></a></div>
-              <?php } else { ?>
-                  <!-- If no image uploaded return the site name -->
-                  <h1><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-          <?php } ?>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
         

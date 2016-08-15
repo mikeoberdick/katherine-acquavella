@@ -45,6 +45,32 @@
 	font-weight: bold;
 }
 
-.navbar-nav {
-	margin: 5px 0 0 35px;
+nav {
+	background-color: #000000;
+	padding: 25px 0;
+	text-align: center;
+	box-shadow: 0px 0px 15px 0px;
+	#menu-main-navigation {
+		display: inline-block;
+		float: none;
+		width: auto;
+		li {
+			margin-right: 10px;
+			a {
+			color: #ffffff;
+			font-weight: bold;
+			text-transform: uppercase;
+			border-bottom: 3px solid transparent;
+			transition: all 1s;
+			&:hover, &:focus {
+				background-color: transparent;
+				border-bottom: 3px solid #ffffff;
+				}
+			}
+		}
+		.current-menu-item a {
+			background-color: transparent;
+			border-bottom: 3px solid #ffffff;
+		}
+	}
 }
