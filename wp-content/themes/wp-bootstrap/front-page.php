@@ -11,18 +11,6 @@
 
         <?php endwhile; endif; ?>
 
-        <div class="row">
-          <div class="col-md-4">
-              Writing Call out/list of recent work, etc. HERE  
-          </div>
-          <div class="col-md-4">
-              Broadcasting Call out/list of recent work, etc. HERE  
-          </div>
-          <div class="col-md-4">
-              Social Media Call out/list of recent work, etc. HERE  
-          </div>
-        </div>
-
         </div>
       </div>
         

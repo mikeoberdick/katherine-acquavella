@@ -64,13 +64,28 @@ nav {
 			transition: all 1s;
 			&:hover, &:focus {
 				background-color: transparent;
-				border-bottom: 3px solid #ffffff;
+				color: #fcaa0b;
+				border-bottom: 3px solid #fcaa0b;
 				}
 			}
 		}
 		.current-menu-item a {
 			background-color: transparent;
-			border-bottom: 3px solid #ffffff;
+			color: #fcaa0b;
+			border-bottom: 3px solid #fcaa0b;
 		}
 	}
+}
+
+#navBtn {
+	color: #000000;
+	padding: 10px;
+	font-size: 18px;
+	font-family: "roboto", sans-serif;
+	margin: 0 auto;
+}
+
+.navbar-collapse {
+	border-top: 0;
+	box-shadow: none;
 }

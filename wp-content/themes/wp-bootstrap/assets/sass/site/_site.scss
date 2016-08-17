@@ -16,46 +16,62 @@
 	background: #000000 url('/wp-content/themes/wp-bootstrap/assets/images/header_bg.jpg') no-repeat center center;
 	background-size: cover;
 	height: 350px;
-	padding: 100px 5% 50px;
+	@media only screen and (max-width: 578px) {
+		height: 200px;
+	}
 	h1 {
-  		a {
-	  		font-family: 'Montserrat', sans-serif;
-			display: block;
-			text-align: center;
-			text-transform: uppercase;
-			font-size: 7.2rem;
-	  		text-shadow:
-	  		0px 4px 3px rgba(0,0,0,0.8),
-	  		0px 8px 13px rgba(0,0,0,0.1),
-	  		0px 18px 23px rgb(0, 0, 0);
-  			color: #ffffff;
-  			text-decoration: none;
-  			&:hover {
-  				opacity: 1;
-  			}
-  		}
+  		font-family: 'Montserrat', sans-serif;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 8em;
+  		text-shadow:
+  		0px 4px 3px rgba(0,0,0,0.8),
+  		0px 8px 13px rgba(0,0,0,0.1),
+  		0px 18px 23px rgb(0, 0, 0);
+  		margin: 0;
+		color: #ffffff;
+		padding-top: 20px;
+		@media only screen and (max-width: 900px) {
+			font-size: 5em;
+				&:first-of-type {
+					padding-top: 50px;
+				}
+			}
+		@media only screen and (max-width: 578px) {
+			font-size: 2.5em;
+
+			}
 	}
 }
 
 /* Sidebar */
 
-#company_info {
-	margin-bottom: 1.5em;
-	#address i {
-		vertical-align: top;
-		margin-top: 3px;
+.sidebar {
+	h3 {
+		padding-bottom: 10px;
+    	border-bottom: solid 2px #fcaa0b;
+		}
+	#company_info {
+		margin-bottom: 1.5em;
+		#address i {
+			vertical-align: top;
+			margin-top: 3px;
+		}
+		p {
+			display: inline-block;
+			padding-left: 10px;
+			margin-bottom: 5px;
+		}
 	}
-	p {
-		display: inline-block;
-		padding-left: 10px;
-		margin-bottom: 5px;
-	}
-}
-
-.widget_categories {
-	ul {
-		list-style: none;
-		padding-left: 0;
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
+	.jobs {
+		img {
+			width: 48.5%;
+	    	max-height: 122px;
+		}
 	}
 }
 
@@ -63,10 +79,11 @@
 
 .post {
 	margin: 20px 0 40px;
-	}
+}
 
-#byline{
-		font-style: italic;
+#categoryList, #tagList {
+	display: inline-block;
+	margin-bottom: 10px;
 		a {
 			font-style: normal;
 			font-size: 12px;
@@ -75,7 +92,6 @@
 		    text-decoration: none;
 		    padding: 5px;
 		    border-radius: 5px;
-		    margin-left: 10px;
 		}
 	}
 
@@ -110,12 +126,20 @@
 					vertical-align: top;
 				}
 				&:hover {
-					opacity: .75;
+					color: $accent_color;
 					}
 				}
 			}
 		}
 	}
+}
+.ninja-forms-required-items {
+		display: none;
+	}
+.ninja-forms-req-symbol {
+		strong {
+	color: $accent_color;
+		}
 }
 
 /* Footer */
@@ -146,7 +170,7 @@
 					vertical-align: top;
 				}
 				&:hover {
-					color: $dark_gray;
+					color: $accent_color;
 					}
 				}
 			}

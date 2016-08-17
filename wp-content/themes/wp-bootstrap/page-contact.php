@@ -23,6 +23,7 @@
                 </div><!-- #social_icons -->
             </div>
             <div class = "col-md-8">
+              <h2 class = "visible-sm-block">Let's Work Together</h2>
                <?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); } ?>
             </div>
           </div>

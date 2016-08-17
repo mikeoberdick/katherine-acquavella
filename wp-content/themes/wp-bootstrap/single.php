@@ -9,7 +9,8 @@
         
           <div class = "page-header">
             <h1><?php the_title(); ?></h1>
-            <p id = "byline">By <?php the_author(); ?> on <?php echo the_time('l, F jS, Y'); ?><?php the_category(' '); ?></p>
+            <div id = "categoryList"><?php the_category(' '); ?></div>
+            <div id = "tagList"><?php the_tags(' '); ?></div>
           </div>
 
           <?php the_content(); ?>

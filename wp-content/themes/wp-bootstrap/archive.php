@@ -15,7 +15,8 @@
 
           <article class = "post">
             <h2><a href = "<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <p id = "byline">By <?php the_author(); ?> on <?php echo the_time('l, F jS, Y'); ?><?php the_category(' '); ?></p>
+            <div id = "categoryList"><?php the_category(' '); ?></div>
+            <div id = "tagList"><?php the_tags(' '); ?></div>
   
             <?php the_excerpt(); ?>
             <hr>
