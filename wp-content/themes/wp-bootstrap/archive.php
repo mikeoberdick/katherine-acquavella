@@ -32,7 +32,7 @@
         <?php endif; ?>
 
         </div>
-          <?php get_sidebar( 'blog' ); ?>
+          <?php get_sidebar( 'sidebar' ); ?>
        </div>
         
 <?php get_footer(); ?>
