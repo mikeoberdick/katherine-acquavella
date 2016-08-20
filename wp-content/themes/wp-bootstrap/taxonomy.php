@@ -4,25 +4,15 @@
       <div class="row">
         <div class = "col-sm-12">
           <div class = "page-header">
-            <h1><?php the_title(); ?></h1>
+            <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); echo '<h1>' . $term->name . ' Archive</h1>'; ?>
           </div>
         </div>
       </div>
       <div class = "row">
-            <?php
-                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                $args = array(
-                'post_type' => 'ka-work',
-                'pagination'=> true,
-                'posts_per_page' => '8',
-                'paged'     => $paged
-                );
                 
-                $wp_query = new WP_Query( $args );
-                
-                // The Loop
-                while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-
+              <?php
+              // The Loop
+              while ( have_posts() ) : the_post(); ?>
               <article class = "col-sm-6 col-lg-3 post">
                 <div class = "workImage"><a href = "<?php the_field('article_link'); ?>" target = "_blank"><img src = "<?php the_field('featured_image'); ?>" /></a></div>
                 <div class = "workHeader"><a href = "<?php the_field('article_link'); ?>" target = "_blank"><h3><?php the_title(); ?></h3></a><span><?php the_field('article_date'); ?></span></div>
