@@ -1,5 +1,3 @@
-<?php get_header(); ?>
-
     <div class="container">
       <div class="row">
         <div class = "col-sm-12">
@@ -36,6 +34,4 @@
             <span id = "newerPosts" class = "col-xs-6 text-left"><?php previous_posts_link( '<i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Previous Page' ); ?></span>
             <span id = "olderPosts" class = "col-xs-6 text-right"><?php next_posts_link( 'Next Page <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>' ); ?></span>
         </div>
-       </div>
-        
-<?php get_footer(); ?>
+    </div>

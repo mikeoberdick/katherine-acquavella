@@ -34,5 +34,6 @@
         </div>
           <?php get_sidebar( 'sidebar' ); ?>
        </div>
+     </div>
         
 <?php get_footer(); ?>

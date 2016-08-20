@@ -1,33 +1,19 @@
-<?php get_header(); ?>
+<?php get_header();
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-12">
-          
-          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        
-          <div class = "page-header">
-            <h1><?php the_title(); ?></h1>
-          </div>
+if( is_page( 'contact' ) ) {
+      get_template_part( 'template-parts/content', 'contact' );
+    }
 
-          <?php the_content(); ?>
+elseif( is_page( 'writing' ) ) {
+    get_template_part( 'template-parts/content', 'writing' );
+  }
 
-          <?php if ( is_page( 'contact' ) ) {
-            get_template_part( 'template-parts/content', 'contact_page' );
-          } ?>
+elseif( is_front_page() ) {
+    get_template_part( 'template-parts/content', 'homepage' );
+  }
 
-        <?php endwhile; else: ?>
-
-        <div class = "page-header">
-            <h1>Oh no!</h1>
-        </div>
-        <p>No content is found on this page!</p>
-
-        <?php endif; ?>
-
-        </div>
-
-      </div>
-        
-<?php get_footer(); ?>
+else {
+   get_template_part( 'template-parts/content', 'page' );
+  }
+      
+get_footer(); ?>

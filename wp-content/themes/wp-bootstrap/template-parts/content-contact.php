@@ -1,7 +1,4 @@
-<?php get_header(); ?>
-
     <div class="container">
-      <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
           <div class = "page-header">
@@ -29,5 +26,4 @@
           </div>
         </div>
       </div>
-        
-<?php get_footer(); ?>
+    </div>

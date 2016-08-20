@@ -1,5 +1,3 @@
-		</div> <!-- /container -->
-
 			<div id="footerCopyWrapper">
 				<div class = "container">
 					<footer id="colophon" class="site-footer" role="contentinfo">

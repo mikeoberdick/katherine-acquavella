@@ -27,5 +27,6 @@
         </div>
           <?php get_sidebar( 'blog' ); ?>
        </div>
+    </div>
         
 <?php get_footer(); ?>
